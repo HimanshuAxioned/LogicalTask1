@@ -27,27 +27,16 @@ console.log("2)\n");
 function two() {
   let s = "";
   for (i = 1; i <= 5; i++) {
-    // space ie. 5-1=4 for first row , 5-2=3 for second row and so on.
-    for (let j = 1; j <= 5 - i; j++) {
-      s += " ";
-    }
-
-    for (let star = 0; star < 2 * i - 1; star++) {
-      if (i == 1 || i === 5) {
-        s += "*";
+    for (let j = 1; j <= 9 ; j++) {
+      if(i==5 || i+j==6 || j-i==4){
+        s+="*";
       }
-      else {
-        if (star === 0 || star === 2 * i - 2) {
-
-            s += "*";
-          }
-          else {
-            s += " ";
-          }
-        }
+      else{
+        s+=" "
       }
-      s += "\n"
     }
+    s+="\n"
+  }
     console.log(s + "\n")
   }
   two();
@@ -61,6 +50,7 @@ function two() {
       }
       s += "\n";
     }
+    
     console.log(s + "\n");
   }
 
